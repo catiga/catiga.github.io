@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 韦阳的博客
-subtitle: 算法码上来
-description: 华东师范大学 | 计算机科学与技术 | 自然语言处理
-keywords: "ECNU NLP DeepLearning AntNLP 韦阳 godweiyang WeiYang 自然语言处理 深度学习 算法码上来"
-author: 韦阳
+title: 九城的博客
+subtitle: 信仰物理的程序员
+description: 学术 | 生活 | 点点滴滴
+keywords: "美好的世界源于不确定性，这是概率的物理意义么"
+author: catiga
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://godweiyang.com
+url: https://catiga.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -112,9 +112,7 @@ theme: matery
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repository:
-    github: git@github.com:godweiyang/godweiyang.github.io.git
-    coding: git@e.coding.net:godweiyang/godweiyang.git
+  repository: git@github.com:catiga/catiga.github.io.git
   branch: master
 - type: baidu_url_submitter
 
