@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>九城的博客</title>
+  <title>九城Home</title>
   
   <subtitle>信仰物理的程序员</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-10-15T11:24:54.947Z</updated>
+  <updated>2021-10-18T10:35:37.550Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -21,9 +21,21 @@
     <link href="https://catiga.github.io/2021/10/15/enjoy-new-world/"/>
     <id>https://catiga.github.io/2021/10/15/enjoy-new-world/</id>
     <published>2021-10-15T11:24:54.000Z</published>
-    <updated>2021-10-15T11:24:54.947Z</updated>
+    <updated>2021-10-18T10:35:37.550Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;关于写博客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/medias/contact.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h2 id=&quot;为什么要创建自己的博客站&quot;&gt;&lt;a href=&quot;#为什么要创建自己的博客站&quot;
+        
+      
     
     </summary>
     
