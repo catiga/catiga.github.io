@@ -13,9 +13,9 @@ menu:
   Archives:
     url: /archives
     icon: fa-archive
-  About:
-    url: /about
-    icon: fa-user-circle-o
+  #About:
+  #  url: /about
+  #  icon: fa-user-circle-o
   Friends:
     url: /friends
     icon: fa-address-book
