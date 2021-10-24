@@ -90,17 +90,17 @@ indexbtn:
   enable: true
   name: Github
   icon: fa-github-alt
-  url: https://github.com/godweiyang
+  url: https://github.com/catiga
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  qq: 792321264
-  github: godweiyang
-  weibo: godweiyang
-  email: godweiyang@gmail.com
-  zhihu: godweiyang
+  qq: 7307368
+  github: catiga
+  # weibo: godweiyang
+  email: catiga03@gmail.com
+  # zhihu: godweiyang
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -120,8 +120,8 @@ code:
 reward:
   enable: true
   title: 写作不易，客官能否打赏一杯奶茶？
-  wechat: /medias/reward/wechat.png
-  alipay: /medias/reward/alipay.jpg
+  # wechat: /medias/reward/wechat.png
+  # alipay: /medias/reward/alipay.jpg
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
