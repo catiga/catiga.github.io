@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-10-18T10:35:37.550Z</updated>
+  <updated>2021-10-24T03:20:44.157Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于EIP-1559协议</title>
+    <link href="https://catiga.github.io/2021/10/24/eip1559/"/>
+    <id>https://catiga.github.io/2021/10/24/eip1559/</id>
+    <published>2021-10-24T02:57:13.000Z</published>
+    <updated>2021-10-24T03:20:44.157Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="https://catiga.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="以太坊" scheme="https://catiga.github.io/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>enjoy new world</title>
