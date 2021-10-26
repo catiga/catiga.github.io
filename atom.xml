@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-10-24T03:20:44.157Z</updated>
+  <updated>2021-10-26T09:06:34.936Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解“无穷小”</title>
+    <link href="https://catiga.github.io/2021/10/25/about-infinitesimal/"/>
+    <id>https://catiga.github.io/2021/10/25/about-infinitesimal/</id>
+    <published>2021-10-25T11:29:25.000Z</published>
+    <updated>2021-10-26T09:06:34.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;什么是无穷小？&quot;&gt;&lt;a href=&quot;#什么是无穷小？&quot; class=&quot;headerlink&quot; title=&quot;什么是无穷小？&quot;&gt;&lt;/a&gt;什么是无穷小？&lt;/h1&gt;&lt;p&gt;无穷小数学符号记为 $\epsilon$ ,
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="https://catiga.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="数学" scheme="https://catiga.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="极限" scheme="https://catiga.github.io/tags/%E6%9E%81%E9%99%90/"/>
+    
+  </entry>
   
   <entry>
     <title>关于EIP-1559协议</title>
