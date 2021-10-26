@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-10-26T09:06:34.936Z</updated>
+  <updated>2021-10-26T09:08:49.000Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://catiga.github.io/2021/10/25/about-infinitesimal/"/>
     <id>https://catiga.github.io/2021/10/25/about-infinitesimal/</id>
     <published>2021-10-25T11:29:25.000Z</published>
-    <updated>2021-10-26T09:06:34.936Z</updated>
+    <updated>2021-10-26T09:08:49.000Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,10 @@
       
         
         
-          &lt;h1 id=&quot;什么是无穷小？&quot;&gt;&lt;a href=&quot;#什么是无穷小？&quot; class=&quot;headerlink&quot; title=&quot;什么是无穷小？&quot;&gt;&lt;/a&gt;什么是无穷小？&lt;/h1&gt;&lt;p&gt;无穷小数学符号记为 $\epsilon$ ,
+          &lt;blockquote&gt;
+&lt;p&gt;九城爱数学&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;什么是无穷小？&quot;&gt;&lt;a href=&quot;#什么是无穷小？&quot; class=&quot;headerlink&quot; title=&quot;什么是无穷小？&quot;&gt;&lt;/a&gt;什么是无穷小？&lt;/h1&gt;&lt;p&gt;无穷小数学符号记为
         
       
     
@@ -93,36 +96,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>5W2H | 关于写博客的七点反思</title>
-    <link href="https://catiga.github.io/2020/01/14/5w2h-godweiyang/"/>
-    <id>https://catiga.github.io/2020/01/14/5w2h-godweiyang/</id>
-    <published>2020-01-14T07:27:31.000Z</published>
-    <updated>2021-10-15T10:45:54.720Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;关注公众号【算法码上来】，每日算法干货马上就来！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/medias/contact.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h2 id=&quot;When？什么时候开始写的？&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://catiga.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="博客" scheme="https://catiga.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
