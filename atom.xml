@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-10-26T09:08:49.000Z</updated>
+  <updated>2021-11-11T06:59:57.925Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于广义内容的推荐算法系统</title>
+    <link href="https://catiga.github.io/2021/11/04/context-recalg/"/>
+    <id>https://catiga.github.io/2021/11/04/context-recalg/</id>
+    <published>2021-11-04T07:26:03.000Z</published>
+    <updated>2021-11-11T06:59:57.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面-什么是基于内容推荐算法&quot;&gt;&lt;a href=&quot;#写在前面-什么是基于内容推荐算法&quot; class=&quot;headerlink&quot; title=&quot;写在前面 - 什么是基于内容推荐算法&quot;&gt;&lt;/a&gt;写在前面 -
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>理解“无穷小”</title>
