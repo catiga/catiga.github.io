@@ -8,7 +8,11 @@ date: 2021-11-04 15:26:03
 password:
 summary:
 tags:
+- 内容推荐
+- 向量化表示
+- NLP
 categories:
+- 算法
 ---
 
 # 写在前面 - 什么是基于内容推荐算法
