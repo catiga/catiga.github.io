@@ -4,14 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="理解“无穷小”, 美好的世界源于微观不确定性，这是概率的物理意义么">
+    <meta name="keywords" content="广义文本的向量表示方法, 美好的世界源于微观不确定性，这是概率的物理意义么">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="
-九城爱数学
-
-什么是无穷小？无穷小数学符号记为 $\epsilon$ , 它的数学性质应该满足：对于任意给定实数 $\gamma$&amp;gt;0，都满足 0&amp;lt;|$\epsilon$|&amp;lt;$\gamma$。很明显，无穷小是数学概念，并">
+    <meta name="description" content="NLP的基础工作就是文本处理，向量化文本表示的核心目的是将文本表示为一系列的能够表达文本语义的向量，有word2vec、str2vec和doc2vec技术，区别是目标处理单元不同。word2vec即词向量，str2vec为句向量，doc2v">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>理解“无穷小” | 九城Home</title>
+    <title>广义文本的向量表示方法 | 九城Home</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -314,13 +311,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        理解“无穷小”
+                        广义文本的向量表示方法
                     </div>
                 </div>
             </div>
@@ -431,12 +428,16 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/数学/" target="_blank">
-                            <span class="chip bg-color">数学</span>
+                        <a href="/tags/内容推荐/" target="_blank">
+                            <span class="chip bg-color">内容推荐</span>
                         </a>
                         
-                        <a href="/tags/极限/" target="_blank">
-                            <span class="chip bg-color">极限</span>
+                        <a href="/tags/NLP/" target="_blank">
+                            <span class="chip bg-color">NLP</span>
+                        </a>
+                        
+                        <a href="/tags/文本向量化/" target="_blank">
+                            <span class="chip bg-color">文本向量化</span>
                         </a>
                         
                     </div>
@@ -447,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/数学/" class="post-category" target="_blank">
-                            数学
+                        <a href="/categories/算法/" class="post-category" target="_blank">
+                            算法
                         </a>
                         
                     </div>
@@ -459,7 +460,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-25
+                    2021-11-12
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -473,14 +474,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    571
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
                 
@@ -496,14 +497,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>九城爱数学</p>
-</blockquote>
-<h1 id="什么是无穷小？"><a href="#什么是无穷小？" class="headerlink" title="什么是无穷小？"></a>什么是无穷小？</h1><p>无穷小数学符号记为 $\epsilon$ , 它的数学性质应该满足：<br><strong>对于任意给定实数 $\gamma$&gt;0</strong>，都满足 0&lt;|$\epsilon$|&lt;$\gamma$。很明显，无穷小是数学概念，并不可能存在于实数域中。<br>以极限形式定义会得到更加简洁直观的表达：满足$\lim\limits_{x\to c}f(x) = 0$ 的 $f(x)$ 是 $x\to c$ 时的无穷小。</p>
-<p>无穷小有一个重要的隐含性质，即参考系无关，类似物理定律，在任意参照物系统里面，都绝对成立。<br>那么无穷小到底是一个数么？以反证法来说明，如果无穷小是一个数，那么这个数一定不会小于它本身，则违反了上述无穷小定义公式，所以无穷小并不是一个数。<br>实际上，在经典的极限和微积分定义中，无穷小通常是以函数、数列形式表达，可以自由表达。</p>
-<h1 id="关于0-and-无穷小"><a href="#关于0-and-无穷小" class="headerlink" title="关于0 and 无穷小"></a>关于0 and 无穷小</h1><p>0，你可以看成是常数，也可以是常数函数 $f(x)=0$ 或者常数数列 $ ${$0, 0, 0, …$}$ $，都符合无穷小的定义，绝对值小于任意正实数。<br>无穷小与0一个最重要的区别是数学上，无穷小可以用作除法，两个相关（相关的意义是具有函数关系）的无穷小的比值就是这个函数的导数。</p>
-<h1 id="无穷小-and-物理"><a href="#无穷小-and-物理" class="headerlink" title="无穷小 and 物理"></a>无穷小 and 物理</h1><p>数学意义上的无穷小，是一个混乱且容易引起歧义的量，正在逐渐消失在视野；但是在屋里中，这个无穷小确是切实存在的。<br>物理学的意义是用数学描述现实世界的科学，一个重要区别是数学本质是连续的，数学上的离散化是在连续基础上界定和设计出来，而物理学对现实世界的描述过程中，引发了多次革命，最为重要的一次革命就是现实世界的离散化（量子化），而这个离散化后的常量值就是物理世界中的无穷小，即普朗克常数。</p>
-<p>** 刚开始逼着写博客，有点累，休息了。实际上未完。。。 **</p>
+                <p>NLP的基础工作就是文本处理，向量化文本表示的核心目的是将文本表示为一系列的能够表达文本语义的向量，有word2vec、str2vec和doc2vec技术，区别是目标处理单元不同。<br>word2vec即词向量，str2vec为句向量，doc2vec则为文档向量。</p>
+<h2 id="word2vec"><a href="#word2vec" class="headerlink" title="word2vec"></a>word2vec</h2><p>词袋（bag of word）模型是最早的以词为基础处理单元的文本向量化方法。该模型产生的向量与原来文本中单词出现的顺序没有关系，而是词典中每个单词再文本中出现的频率。该方法虽然简单，但有以下问题：</p>
+<ol>
+<li>维度灾难</li>
+<li>无法保留词序信息</li>
+<li>存在语义鸿沟</li>
+</ol>
+<p>随着互联网技术的发展，大量无标注数据的产生，研究中心转移到利用无标注数据挖掘有价值的信息上来。word2vec（词向量）就是为了利用神经网络，从大量无标注的文本中提取有用的信息而产生。</p>
+<p>词袋模型只是将词语符号化，所以词袋模型是不包含语义信息的。如何使词表示包含语义信息是该领域研究者面临的问题。分布假设（distributional hypothesis）的提出为解决上述问题提供了理论基础。该假设的核心思想是：上下文相似的词，其语义也相似。随后大量研究人员整理了利用上下文表示词义的方法，这类方法就是有名的词空间模型（word space model）。通过语言模型构建上下文与目标词之间的关系，是一种常见的方法，神经网络词向量模型就是根据上下文与目标词之间的关系进行建模。</p>
+<h2 id="NNLM"><a href="#NNLM" class="headerlink" title="NNLM"></a>NNLM</h2><p>神经网络语言模型（Neural Network Language Model，NNLM）与传统方法估算的不同在于通过一个神经网络结构对n元条件概率进行估计。由于NNLM模型使用低维紧凑的词向量对上下文进行表示，解决了词袋模型带来的数据稀疏、语义鸿沟等问题。另一方面，在相似的上下文环境中，NNLM模型可以预测出相似的目标词，而传统模型无法做到这一点。例如，如果在预料中 A=“小狗在院子里趴着” 出现1000次， B=“小猫在院子里趴着” 出现1次。A和B的唯一区别就是狗和猫，两个词无论在语义还是语法上都相似。根据频率来估算概率P(A) &gt;&gt; P(B)，这显然不合理。如果采用NNLM计算P(A)~P(B)，因为NNLM模型采用低维的向量表示词语，假定相似的词，则其词向量也相似。</p>
+<p><img src="str_nnlm.png" alt="NNLM词向量处理模型"></p>
+<h2 id="C-amp-W"><a href="#C-amp-W" class="headerlink" title="C&amp;W"></a>C&amp;W</h2><p>C&amp;W = context &amp; word(上下文和目标词)，主要目的并不在于生成一份好的词向量，甚至不想训练语言模型，而是要用这份词向量去完成NLP里面的各项任务，比如词性标注、命名实体识别、短语识别、语义角色标注等等。NNLM模型的目标是构建一个语言概率模型，而C&amp;W则是以生成词向量为目标的模型。C&amp;W模型并没有采用语言模型去求解词语上下文的条件概率，而是直接对n元短语打分，这就省去了NNLM模型中从隐藏层到输出层的权重计算，大大降低了运算量。其核心机理是：如果n元短语在语料库中出现过，那么模型会给该短语打高分；如果是未出现则在语料库中的短语则会得到较低的评分。</p>
+<h2 id="CBOW-and-Skip-gram"><a href="#CBOW-and-Skip-gram" class="headerlink" title="CBOW and Skip-gram"></a>CBOW and Skip-gram</h2><p>为了更高效的获取词向量，研究者在NNLM和C&amp;W模型的基础上保留其核心部分，得到CBOW（Continuous Bag of Words）模型和Skip-gram模型。</p>
+<p><img src="cbow.png" alt="CBOW模型"></p>
+<p>模型使用一段文本的中间词作为目标词，去掉了隐藏层，大幅度提升了计算频率。此外，CBOW模型还使用上下文歌词的词向量的平均值替代NNLM模型各个拼接的词向量。即根据上下文来预测当前词语的频率，且上下文所有词出现频率的影响权重是一样的。Skip-gram模型同样没有隐藏层，与CBOW模型输入上下文词的平均词向量不同，它是从目标词W的上下文中选择一个词，将其词向量组成上下文的表示。即根据当前词语来预测上下文概率。</p>
+<h2 id="doc2vec-str2vec"><a href="#doc2vec-str2vec" class="headerlink" title="doc2vec/str2vec"></a>doc2vec/str2vec</h2><p>利用word2vec计算词语间的相似度有非常好的效果，word2vec技术也可以用于计算句子或者其他长文本间的相似度，其一般做法是对文本粉刺后，提取其关键词，用词向量表示这些关键词，接着对关键词向量求平均或者将其拼接，最后利用词向量计算文本间的相似度。这种方法丢失了文本中的次序信息，而文本的语序包含重要信息。为此，有研究者在word2vec的基础上提出了文档向量化（doc2vec），又称str2vec和para2vec。</p>
+<p>doc2vec技术存在两种模型–Distributed Memory(DM)和Distributed Bag of Words(DBOW)，分别对应word2vec技术里的CBOW和Skip-gram模型。Doc2vec相对于word2vec不同之处在于，在输入层，增添了一个新句子向量Paragraph vector， Paragraph vector可以被看作是另一个词向量，它扮演了一个记忆，词袋模型中，因为每次训练只会截取句子中一小部分词训练，而忽略了除了本次训练词以外该句子中的其他词，忽略了文本的词序问题。而doc2vec中的paragraph vector则弥补了这方面的不足，它每次训练也是滑动截取句子中一小部分词来训练，paragraph vector在同一个句子的若干次训练中是共享的，所以同一句话会有多次训练，每次训练中输入都包含paragraph vector。它可以被看作是句子的主旨（中心思想），有了它，该句子的主旨每次都会被放入作为输入的一部分来训练。这样每次训练中，不光是训练了词，得到了词向量。同时随着一句话每次滑动截取若干词训练的过程中，作为每次训练的输入层一部分的共享paragraph vector，该向量的主旨会越来越准确。</p>
+<p><img src="mod_dbow.png" alt="DBOW模型示意图"></p>
+<p>那么doc2vec是怎么预测新的句子paragraph vector呢？其实在预测新句子的时候，还是会将该paragraph vector随机初始化，放入模型中再重新根据随机梯度下降不断迭代求得最终稳定下来的句子向量。不过在预测过程中，模型里的词向量还有投影层到输出层的softmax weights参数是不会变的，这样在不断迭代中只会更新paragraph vector，其他参数均已固定，只需很少的时间就能计算出带预测的paragraph vector。</p>
 
             </div>
             <hr />
@@ -662,9 +674,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《理解“无穷小”》
+                    《广义文本的向量表示方法》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/10/25/about-infinitesimal/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/11/12/text2vec/" property="cc:attributionName"
                rel="cc:attributionURL">
                 catiga
             </a> 采用
@@ -705,7 +717,7 @@
         repo: 'catiga.github.io',
         owner: 'catiga',
         admin: "catiga",
-        id: '2021/10/25/about-infinitesimal/',
+        id: '2021/11/12/text2vec/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -988,9 +1000,68 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/11/12/text2vec/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="广义文本的向量表示方法">
+                        
+                        <span class="card-title">广义文本的向量表示方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            NLP的基础工作就是文本处理，向量化文本表示的核心目的是将文本表示为一系列的能够表达文本语义的向量，有word2vec、str2vec和doc2vec技术，区别是目标处理单元不同。word2vec即词向量，str2vec为句向量，doc2v
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/内容推荐/" target="_blank">
+                        <span class="chip bg-color">内容推荐</span>
+                    </a>
+                    
+                    <a href="/tags/NLP/" target="_blank">
+                        <span class="chip bg-color">NLP</span>
+                    </a>
+                    
+                    <a href="/tags/文本向量化/" target="_blank">
+                        <span class="chip bg-color">文本向量化</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/11/04/context-recalg/">
                     <div class="card-image">
@@ -1008,9 +1079,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-11-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1036,55 +1107,6 @@
                     
                     <a href="/tags/向量化表示/" target="_blank">
                         <span class="chip bg-color">向量化表示</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/10/24/eip1559/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="关于EIP-1559协议">
-                        
-                        <span class="card-title">关于EIP-1559协议</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            写在前面比特币以一种全新的思路重建了货币体系，这个传统情况下被认为一定需要权威中心（政府）背书和管理的核心金融基础设施，以太坊则带来了由加密货币到去中心化应用生态爆发，从ICO到Defi，再到NFT，区块链已经越来越接近真实生活。秉承去中心
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-10-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/区块链/" class="post-category" target="_blank">
-                                    区块链
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/以太坊/" target="_blank">
-                        <span class="chip bg-color">以太坊</span>
                     </a>
                     
                 </div>
