@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-11-13T09:22:29.814Z</updated>
+  <updated>2021-11-24T12:36:34.674Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于NLP的关键词提取技术</title>
+    <link href="https://catiga.github.io/2021/11/24/nlp-text-key/"/>
+    <id>https://catiga.github.io/2021/11/24/nlp-text-key/</id>
+    <published>2021-11-24T06:53:41.000Z</published>
+    <updated>2021-11-24T12:36:34.674Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;关键词提取&quot;&gt;&lt;a href=&quot;#关键词提取&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
+    
+  </entry>
   
   <entry>
     <title>广义文本的向量表示方法</title>
@@ -38,9 +64,9 @@
       <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
-    
       <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
+    
+      <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
     
       <category term="文本向量化" scheme="https://catiga.github.io/tags/%E6%96%87%E6%9C%AC%E5%90%91%E9%87%8F%E5%8C%96/"/>
     
@@ -68,9 +94,9 @@
       <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
-    
       <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
+    
+      <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
     
       <category term="向量化表示" scheme="https://catiga.github.io/tags/%E5%90%91%E9%87%8F%E5%8C%96%E8%A1%A8%E7%A4%BA/"/>
     
