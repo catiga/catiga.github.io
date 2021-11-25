@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -493,14 +493,17 @@
 <ol>
 <li>无监督关键词提取算法<br>不需要人工标注的语料，利用某些方法发现文本中比较重要的词作为关键词，进行关键词提取。该方法是先抽取出候选词，然后对每个候选词进行打分，输出topK个分值最高的候选词作为关键词。根据打分的策略不同，有不同的算法，如TF-IDF、TextRank、LDA等算法。<br>无监督关键词提取方法主要有三类：<strong>基于统计特征的关键词提取（TF-IDF）</strong>；<strong>基于词图模型的关键词提取（PageRank，TextRank）</strong>；<strong>基于主题模型的关键词提取（LDA）</strong>。</li>
 </ol>
+<p><img src="total_method.png" alt="无监督算法分类"></p>
 <ul>
 <li>基于统计特征的关键词提取算法思想是利用文档中词语的统计信息抽取文档的关键词；</li>
 <li>基于词图模型的关键词提取首先要构建文档的语言网络图，然后对语言进行网络图分析，在这个图上寻找具有重要作用的词或者短语，这些短语就是文档的关键词；</li>
 <li>基于主题关键词提取算法主要利用的是主题模型中关于主题分布的性质进行关键词提取；</li>
 </ul>
 <ol start="2">
-<li><p>有监督关键词提取算法<br>将关键词抽取过程视为二分类问题，先提取出候选词，然后对于每个候选词划定标签，要么是关键词，要么不是关键词，然后训练关键词抽取分类器。当新来一篇文档时，提取出所有的候选词，然后利用训练好的关键词提取分类器，对各个候选词进行分类，最终将标签为关键词的候选词作为关键词。</p>
-</li>
+<li>有监督关键词提取算法<br>将关键词抽取过程视为二分类问题，先提取出候选词，然后对于每个候选词划定标签，要么是关键词，要么不是关键词，然后训练关键词抽取分类器。当新来一篇文档时，提取出所有的候选词，然后利用训练好的关键词提取分类器，对各个候选词进行分类，最终将标签为关键词的候选词作为关键词。</li>
+</ol>
+<p><img src="supervise.jpeg" alt="有监督算法处理流程"></p>
+<ol start="3">
 <li><p>两种算法优缺点<br>无监督方法不需要人工标注训练集合的过程，因此更加快捷，但由于无法有效综合利用多信息对候选关键词排序，所以效果无法与有监督方法媲美；而有监督方法可以通过训练学习调节多种信息对于判断关键词的影响程度，因此效果更优，有监督的文本关键词提取算法需要高昂的人工成本（标注），因此现有的文本关键词提取主要采用适用性较强的无监督关键词提取。</p>
 </li>
 <li><p>关键词提取工具/sdk</p>
@@ -1260,7 +1263,7 @@ features <span class="token operator">=</span> features_list<span class="token p
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="基于NLP的关键词提取技术">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基于NLP的关键词提取技术">
                         
                         <span class="card-title">基于NLP的关键词提取技术</span>
                     </div>
@@ -1310,7 +1313,7 @@ features <span class="token operator">=</span> features_list<span class="token p
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="广义文本的向量表示方法">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="广义文本的向量表示方法">
                         
                         <span class="card-title">广义文本的向量表示方法</span>
                     </div>
