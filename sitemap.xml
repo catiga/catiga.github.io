@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://catiga.github.io/2021/12/03/knowledge-graph/</loc>
+    
+    <lastmod>2021-12-05T09:42:37.319Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://catiga.github.io/404.html</loc>
+    
+    <lastmod>2021-12-03T08:03:41.816Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://catiga.github.io/2021/11/24/nlp-text-key/</loc>
     
     <lastmod>2021-11-25T08:04:51.319Z</lastmod>
@@ -65,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://catiga.github.io/archives/index.html</loc>
+    <loc>https://catiga.github.io/about/index.html</loc>
     
     <lastmod>2021-10-15T10:45:54.721Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://catiga.github.io/about/index.html</loc>
+    <loc>https://catiga.github.io/archives/index.html</loc>
     
     <lastmod>2021-10-15T10:45:54.721Z</lastmod>
     
@@ -82,13 +96,6 @@
     <loc>https://catiga.github.io/categories/index.html</loc>
     
     <lastmod>2021-10-15T10:45:54.721Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://catiga.github.io/404.html</loc>
-    
-    <lastmod>2021-10-15T10:45:54.720Z</lastmod>
     
   </url>
   

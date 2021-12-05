@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-11-25T08:04:51.319Z</updated>
+  <updated>2021-12-05T09:42:37.319Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于知识图谱构建</title>
+    <link href="https://catiga.github.io/2021/12/03/knowledge-graph/"/>
+    <id>https://catiga.github.io/2021/12/03/knowledge-graph/</id>
+    <published>2021-12-03T08:38:39.000Z</published>
+    <updated>2021-12-05T09:42:37.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/NLP/"/>
+    
+    
+      <category term="知识图谱" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+      <category term="信息抽取" scheme="https://catiga.github.io/tags/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/"/>
+    
+      <category term="知识融合" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E8%9E%8D%E5%90%88/"/>
+    
+      <category term="知识加工" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E5%8A%A0%E5%B7%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>基于NLP的关键词提取技术</title>
@@ -64,9 +98,9 @@
       <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
-    
       <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
     
       <category term="文本向量化" scheme="https://catiga.github.io/tags/%E6%96%87%E6%9C%AC%E5%90%91%E9%87%8F%E5%8C%96/"/>
     
@@ -94,11 +128,11 @@
       <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
-    
       <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
     
       <category term="向量化表示" scheme="https://catiga.github.io/tags/%E5%90%91%E9%87%8F%E5%8C%96%E8%A1%A8%E7%A4%BA/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
     
   </entry>
   
