@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://catiga.github.io/2021/12/06/knowledge-graph-ner/</loc>
+    
+    <lastmod>2021-12-06T08:37:33.121Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://catiga.github.io/2021/12/03/knowledge-graph/</loc>
     
-    <lastmod>2021-12-05T09:42:37.319Z</lastmod>
+    <lastmod>2021-12-06T03:46:13.954Z</lastmod>
     
   </url>
   
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://catiga.github.io/about/index.html</loc>
-    
-    <lastmod>2021-10-15T10:45:54.721Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://catiga.github.io/archives/index.html</loc>
     
     <lastmod>2021-10-15T10:45:54.721Z</lastmod>
@@ -94,6 +94,13 @@
   
   <url>
     <loc>https://catiga.github.io/categories/index.html</loc>
+    
+    <lastmod>2021-10-15T10:45:54.721Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://catiga.github.io/about/index.html</loc>
     
     <lastmod>2021-10-15T10:45:54.721Z</lastmod>
     

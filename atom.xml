@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2021-12-05T09:42:37.319Z</updated>
+  <updated>2021-12-06T08:37:33.121Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于知识图谱中的命名实体识别（NER）</title>
+    <link href="https://catiga.github.io/2021/12/06/knowledge-graph-ner/"/>
+    <id>https://catiga.github.io/2021/12/06/knowledge-graph-ner/</id>
+    <published>2021-12-06T03:44:57.000Z</published>
+    <updated>2021-12-06T08:37:33.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;命名实体识别（Named Entity
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/NLP/"/>
+    
+    
+      <category term="知识图谱" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+      <category term="NER" scheme="https://catiga.github.io/tags/NER/"/>
+    
+      <category term="命名实体识别" scheme="https://catiga.github.io/tags/%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于知识图谱构建</title>
     <link href="https://catiga.github.io/2021/12/03/knowledge-graph/"/>
     <id>https://catiga.github.io/2021/12/03/knowledge-graph/</id>
     <published>2021-12-03T08:38:39.000Z</published>
-    <updated>2021-12-05T09:42:37.319Z</updated>
+    <updated>2021-12-06T03:46:13.954Z</updated>
     
     <summary type="html">
     
