@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>取模与取余的区别</title>
+      <link href="/2022/03/15/mod-rest/"/>
+      <url>/2022/03/15/mod-rest/</url>
+      
+        <content type="html"><![CDATA[<h2 id="模数和余数的计算方法"><a href="#模数和余数的计算方法" class="headerlink" title="模数和余数的计算方法"></a>模数和余数的计算方法</h2><p>计 $ { (x, y) | (x, y) \in 实数 } $， $ m = \frac{x}{y} $，m计为除数，则有取模和取余的计算方法为<br>$$<br>v = x - m*y<br>$$</p><p>区别在于除数m的计数方法：</p><ul><li>取余：除数m向0值靠近取证</li><li>取模：除数m向无穷小靠近取证</li></ul><h5 id="很容易看出，取模和取余在除数m为正时（即-x，y-为同符号数时）结果相同，反之则不同"><a href="#很容易看出，取模和取余在除数m为正时（即-x，y-为同符号数时）结果相同，反之则不同" class="headerlink" title="很容易看出，取模和取余在除数m为正时（即 x，y 为同符号数时）结果相同，反之则不同"></a>很容易看出，取模和取余在除数m为正时（即 x，y 为同符号数时）结果相同，反之则不同</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ultimate DeFi and Blockchain Research Base</title>
       <link href="/2022/01/16/mark-blockchain-links/"/>
       <url>/2022/01/16/mark-blockchain-links/</url>
