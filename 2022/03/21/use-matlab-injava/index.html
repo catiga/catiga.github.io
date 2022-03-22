@@ -311,7 +311,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,14 +466,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    386
+                    511
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -503,7 +503,7 @@
 <pre><code> source ~/.zprofile</code></pre></li>
 <li><p>设置DYLD_LIBRARY_PATH<br>bash:echo “export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:<java_install_path>/bin” &gt;&gt; ~/.profile</java_install_path></p>
 <pre><code> source ~/.profile</code></pre><p>zsh :echo “export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:<java_install_path>/bin” &gt;&gt; ~/.zshrc</java_install_path></p>
-<pre><code> source ~/.zshrc</code></pre><p>[参考这里]<a href="https://ww2.mathworks.cn/help/compiler_sdk/java/configure-your-java-environment.html?searchHighlight=java&amp;s_tid=srchtitle_java_7" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/compiler_sdk/java/configure-your-java-environment.html?searchHighlight=java&amp;s_tid=srchtitle_java_7</a></p>
+<pre><code> source ~/.zshrc</code></pre><p><a href="https://ww2.mathworks.cn/help/compiler_sdk/java/configure-your-java-environment.html?searchHighlight=java&s_tid=srchtitle_java_7" target="_blank" rel="noopener">参考这里</a></p>
 </li>
 </ol>
 <h2 id="重启MacOS，并关闭SIP"><a href="#重启MacOS，并关闭SIP" class="headerlink" title="重启MacOS，并关闭SIP"></a>重启MacOS，并关闭SIP</h2><ol>
@@ -512,8 +512,49 @@
 <li>在recovery mode 打开terminal</li>
 <li>command line: csrutil disable 关闭SIP</li>
 </ol>
-<h2 id="设置matlab运行时依赖"><a href="#设置matlab运行时依赖" class="headerlink" title="设置matlab运行时依赖"></a>设置matlab运行时依赖</h2><p>以macos为例<br>export DYLD_LIBRARY_PATH=”${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}<br><matlab_runtime_install_dir>/runtime/maci64:<br><matlab_runtime_install_dir>/bin/maci64:<br><matlab_runtime_install_dir>/sys/os/maci64:<br><matlab_runtime_install_dir>/extern/bin/maci64”<br>[参考这里]<a href="https://ww2.mathworks.cn/help/compiler/mcr-path-settings-for-run-time-deployment.html" target="_blank" rel="noopener">https://ww2.mathworks.cn/help/compiler/mcr-path-settings-for-run-time-deployment.html</a></matlab_runtime_install_dir></matlab_runtime_install_dir></matlab_runtime_install_dir></matlab_runtime_install_dir></p>
-<h2 id="完成上述步骤，测试并可以开始工程化开发"><a href="#完成上述步骤，测试并可以开始工程化开发" class="headerlink" title="完成上述步骤，测试并可以开始工程化开发"></a>完成上述步骤，测试并可以开始工程化开发</h2>
+<h2 id="设置matlab运行时依赖"><a href="#设置matlab运行时依赖" class="headerlink" title="设置matlab运行时依赖"></a>设置matlab运行时依赖</h2><p>以macos为例<br>export DYLD_LIBRARY_PATH=”${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}<br><matlab_runtime_install_dir>/runtime/maci64:<br><matlab_runtime_install_dir>/bin/maci64:<br><matlab_runtime_install_dir>/sys/os/maci64:<br><matlab_runtime_install_dir>/extern/bin/maci64”<br><a href="https://ww2.mathworks.cn/help/compiler/mcr-path-settings-for-run-time-deployment.html" target="_blank" rel="noopener">参考这里</a></matlab_runtime_install_dir></matlab_runtime_install_dir></matlab_runtime_install_dir></matlab_runtime_install_dir></p>
+<h2 id="以Eclipse为例工程华开发的配置"><a href="#以Eclipse为例工程华开发的配置" class="headerlink" title="以Eclipse为例工程华开发的配置"></a>以Eclipse为例工程华开发的配置</h2><ol>
+<li><p><matlab_install_dir>/toolbox/…/javabuilder.jar 拷贝到classpath</matlab_install_dir></p>
+</li>
+<li><p>matlab编译打包的 jar 拷贝到classpath</p>
+</li>
+<li><p>测试代码</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">import</span> com<span class="token punctuation">.</span>mathworks<span class="token punctuation">.</span>toolbox<span class="token punctuation">.</span>javabuilder<span class="token punctuation">.</span>MWClassID<span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>mathworks<span class="token punctuation">.</span>toolbox<span class="token punctuation">.</span>javabuilder<span class="token punctuation">.</span>MWComplexity<span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>mathworks<span class="token punctuation">.</span>toolbox<span class="token punctuation">.</span>javabuilder<span class="token punctuation">.</span>MWNumericArray<span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>mathworks<span class="token punctuation">.</span>toolbox<span class="token punctuation">.</span>javabuilder<span class="token punctuation">.</span>internal<span class="token punctuation">.</span>MWMCR<span class="token punctuation">;</span>
+<span class="token keyword">import</span> startpff<span class="token punctuation">.</span>runpf<span class="token punctuation">;</span>
+<span class="token keyword">import</span> test_function<span class="token punctuation">.</span>adder<span class="token punctuation">;</span>
+<span class="token keyword">import</span> startpff<span class="token punctuation">.</span>StartpffMCRFactory<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">today</span> <span class="token punctuation">{</span>
+ <span class="token keyword">static</span> <span class="token punctuation">{</span>
+     <span class="token keyword">try</span> <span class="token punctuation">{</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"java.library.path"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+     <span class="token comment" spellcheck="true">//MWMCR c = StartpffMCRFactory.newInstance();</span>
+     <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dims <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+     MWNumericArray i <span class="token operator">=</span> MWNumericArray<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>dims<span class="token punctuation">,</span> MWClassID<span class="token punctuation">.</span>DOUBLE<span class="token punctuation">,</span> MWComplexity<span class="token punctuation">.</span>REAL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     adder add <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">adder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     Object<span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> add<span class="token punctuation">.</span><span class="token function">test_function</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">for</span><span class="token punctuation">(</span>Object x <span class="token operator">:</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"x======"</span> <span class="token operator">+</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello matlab"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>配置JVM启动参数，此步不是必须<br><img src="matlab_vmargs.png" alt="JVM启动项配置"></p>
+</li>
+<li><p>配置环境变量，此步必须<br><img src="matlab_env.png" alt="JVM环境配置"></p>
+</li>
+<li><p>直接运行查看控制台console结果输出</p>
+</li>
+</ol>
+
             </div>
             <hr />
 
@@ -1006,7 +1047,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="在Java的工程实现中使用Matlab计算能力">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="在Java的工程实现中使用Matlab计算能力">
                         
                         <span class="card-title">在Java的工程实现中使用Matlab计算能力</span>
                     </div>
@@ -1056,7 +1097,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="取模与取余的区别">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="取模与取余的区别">
                         
                         <span class="card-title">取模与取余的区别</span>
                     </div>
@@ -1260,7 +1301,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">27.1k</span>
+            <span class="white-color">27.2k</span>
             
 
             <br>
