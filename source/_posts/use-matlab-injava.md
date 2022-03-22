@@ -37,7 +37,7 @@ Matlab丰富的模型资源、优化的算法能力以及对计算加速的硬�
         source ~/.profile
    zsh :echo "export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:<java_install_path>/bin" >> ~/.zshrc
         source ~/.zshrc
-[参考这里]https://ww2.mathworks.cn/help/compiler_sdk/java/configure-your-java-environment.html?searchHighlight=java&s_tid=srchtitle_java_7
+[参考这里](https://ww2.mathworks.cn/help/compiler_sdk/java/configure-your-java-environment.html?searchHighlight=java&s_tid=srchtitle_java_7)
 
 ## 重启MacOS，并关闭SIP
 1. 重启
@@ -52,7 +52,47 @@ export DYLD_LIBRARY_PATH="${DYLD_LIBRARY_PATH:+${DYLD_LIBRARY_PATH}:}\
 <MATLAB_RUNTIME_INSTALL_DIR>/bin/maci64:\
 <MATLAB_RUNTIME_INSTALL_DIR>/sys/os/maci64:\
 <MATLAB_RUNTIME_INSTALL_DIR>/extern/bin/maci64"
-[参考这里]https://ww2.mathworks.cn/help/compiler/mcr-path-settings-for-run-time-deployment.html
+[参考这里](https://ww2.mathworks.cn/help/compiler/mcr-path-settings-for-run-time-deployment.html)
 
 
-## 完成上述步骤，测试并可以开始工程化开发
+## 以Eclipse为例工程华开发的配置
+1. <matlab_install_dir>/toolbox/.../javabuilder.jar 拷贝到classpath
+2. matlab编译打包的 jar 拷贝到classpath
+3. 测试代码
+```java
+import com.mathworks.toolbox.javabuilder.MWClassID;
+import com.mathworks.toolbox.javabuilder.MWComplexity;
+import com.mathworks.toolbox.javabuilder.MWNumericArray;
+import com.mathworks.toolbox.javabuilder.internal.MWMCR;
+import startpff.runpf;
+import test_function.adder;
+import startpff.StartpffMCRFactory;
+public class today {
+	static {
+		try {
+			System.out.println(System.getProperty("java.library.path"));
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) throws Exception {
+		//MWMCR c = StartpffMCRFactory.newInstance();
+		int[] dims = {1, 2};
+		MWNumericArray i = MWNumericArray.newInstance(dims, MWClassID.DOUBLE, MWComplexity.REAL);
+		adder add = new adder();
+		Object[] arr = add.test_function(1, 1, 1, 1);
+		for(Object x : arr) {
+			System.out.println("x======" + x);
+		}
+		System.out.println("hello matlab");
+	}
+}
+```
+
+4. 配置JVM启动参数，此步不是必须
+![JVM启动项配置](matlab_vmargs.png)
+
+5. 配置环境变量，此步必须
+![JVM环境配置](matlab_env.png)
+
+6. 直接运行查看控制台console结果输出
