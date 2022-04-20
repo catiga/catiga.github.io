@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>九城Home</title>
+  
+  <subtitle>信仰物理的程序员</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://catiga.github.io/"/>
+  <updated>2022-03-22T09:22:24.966Z</updated>
+  <id>https://catiga.github.io/</id>
+  
+  <author>
+    <name>catiga</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Java的工程实现中使用Matlab计算能力</title>
+    <link href="https://catiga.github.io/2022/03/21/use-matlab-injava/"/>
+    <id>https://catiga.github.io/2022/03/21/use-matlab-injava/</id>
+    <published>2022-03-21T10:55:01.000Z</published>
+    <updated>2022-03-22T09:22:24.966Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Matlab丰富的模型资源、优化的算法能力以及对计算加速的硬件支持，使得其在计算核心的算法设计中成为主流开发方法，在传统实现中复杂的算法借助Matlab核心计算能力可以简单快速实现。&lt;br&gt;但是在工程化的实现过程中，实现Matlab能力集成踩坑众多，本文记录了一次在java
+        
+      
+    
+    </summary>
+    
+      <category term="工程化" scheme="https://catiga.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+    
+      <category term="matlab" scheme="https://catiga.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>取模与取余的区别</title>
+    <link href="https://catiga.github.io/2022/03/15/mod-rest/"/>
+    <id>https://catiga.github.io/2022/03/15/mod-rest/</id>
+    <published>2022-03-15T04:15:32.000Z</published>
+    <updated>2022-03-15T04:32:42.709Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;模数和余数的计算方法&quot;&gt;&lt;a href=&quot;#模数和余数的计算方法&quot; class=&quot;headerlink&quot; title=&quot;模数和余数的计算方法&quot;&gt;&lt;/a&gt;模数和余数的计算方法&lt;/h2&gt;&lt;p&gt;计 $ { (x, y) | (x, y) \in 实数 } $， $ m
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数学" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ultimate DeFi and Blockchain Research Base</title>
+    <link href="https://catiga.github.io/2022/01/16/mark-blockchain-links/"/>
+    <id>https://catiga.github.io/2022/01/16/mark-blockchain-links/</id>
+    <published>2022-01-16T07:16:58.000Z</published>
+    <updated>2022-01-16T07:18:44.402Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Fly to &lt;a href=&quot;https://github.com/OffcierCia/ultimate-defi-research-base#security--safety&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Base
+        
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="https://catiga.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="mark" scheme="https://catiga.github.io/tags/mark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于知识图谱中的命名实体识别（NER）</title>
+    <link href="https://catiga.github.io/2021/12/06/knowledge-graph-ner/"/>
+    <id>https://catiga.github.io/2021/12/06/knowledge-graph-ner/</id>
+    <published>2021-12-06T03:44:57.000Z</published>
+    <updated>2021-12-06T08:37:33.121Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;命名实体识别（Named Entity
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/NLP/"/>
+    
+    
+      <category term="知识图谱" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+      <category term="NER" scheme="https://catiga.github.io/tags/NER/"/>
+    
+      <category term="命名实体识别" scheme="https://catiga.github.io/tags/%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于知识图谱构建</title>
+    <link href="https://catiga.github.io/2021/12/03/knowledge-graph/"/>
+    <id>https://catiga.github.io/2021/12/03/knowledge-graph/</id>
+    <published>2021-12-03T08:38:39.000Z</published>
+    <updated>2021-12-06T03:46:13.954Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/NLP/"/>
+    
+    
+      <category term="知识图谱" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+      <category term="信息抽取" scheme="https://catiga.github.io/tags/%E4%BF%A1%E6%81%AF%E6%8A%BD%E5%8F%96/"/>
+    
+      <category term="知识融合" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E8%9E%8D%E5%90%88/"/>
+    
+      <category term="知识加工" scheme="https://catiga.github.io/tags/%E7%9F%A5%E8%AF%86%E5%8A%A0%E5%B7%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于NLP的关键词提取技术</title>
+    <link href="https://catiga.github.io/2021/11/24/nlp-text-key/"/>
+    <id>https://catiga.github.io/2021/11/24/nlp-text-key/</id>
+    <published>2021-11-24T06:53:41.000Z</published>
+    <updated>2021-11-25T08:04:51.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;关键词提取&quot;&gt;&lt;a href=&quot;#关键词提取&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>广义文本的向量表示方法</title>
+    <link href="https://catiga.github.io/2021/11/12/text2vec/"/>
+    <id>https://catiga.github.io/2021/11/12/text2vec/</id>
+    <published>2021-11-12T06:54:22.000Z</published>
+    <updated>2021-11-13T09:22:29.814Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;NLP的基础工作就是文本处理，向量化文本表示的核心目的是将文本表示为一系列的能够表达文本语义的向量，有word2vec、str2vec和doc2vec技术，区别是目标处理单元不同。&lt;br&gt;word2vec即词向量，str2vec为句向量，doc2vec则为文档向量。&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
+    
+      <category term="文本向量化" scheme="https://catiga.github.io/tags/%E6%96%87%E6%9C%AC%E5%90%91%E9%87%8F%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于广义内容的推荐算法系统</title>
+    <link href="https://catiga.github.io/2021/11/04/context-recalg/"/>
+    <id>https://catiga.github.io/2021/11/04/context-recalg/</id>
+    <published>2021-11-04T07:26:03.000Z</published>
+    <updated>2021-11-11T07:12:23.707Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面-什么是基于内容推荐算法&quot;&gt;&lt;a href=&quot;#写在前面-什么是基于内容推荐算法&quot; class=&quot;headerlink&quot; title=&quot;写在前面 - 什么是基于内容推荐算法&quot;&gt;&lt;/a&gt;写在前面 -
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://catiga.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="内容推荐" scheme="https://catiga.github.io/tags/%E5%86%85%E5%AE%B9%E6%8E%A8%E8%8D%90/"/>
+    
+      <category term="向量化表示" scheme="https://catiga.github.io/tags/%E5%90%91%E9%87%8F%E5%8C%96%E8%A1%A8%E7%A4%BA/"/>
+    
+      <category term="NLP" scheme="https://catiga.github.io/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解“无穷小”</title>
+    <link href="https://catiga.github.io/2021/10/25/about-infinitesimal/"/>
+    <id>https://catiga.github.io/2021/10/25/about-infinitesimal/</id>
+    <published>2021-10-25T11:29:25.000Z</published>
+    <updated>2021-10-26T09:08:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;九城爱数学&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;什么是无穷小？&quot;&gt;&lt;a href=&quot;#什么是无穷小？&quot; class=&quot;headerlink&quot; title=&quot;什么是无穷小？&quot;&gt;&lt;/a&gt;什么是无穷小？&lt;/h1&gt;&lt;p&gt;无穷小数学符号记为
+        
+      
+    
+    </summary>
+    
+      <category term="数学" scheme="https://catiga.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="数学" scheme="https://catiga.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="极限" scheme="https://catiga.github.io/tags/%E6%9E%81%E9%99%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于EIP-1559协议</title>
+    <link href="https://catiga.github.io/2021/10/24/eip1559/"/>
+    <id>https://catiga.github.io/2021/10/24/eip1559/</id>
+    <published>2021-10-24T02:57:13.000Z</published>
+    <updated>2021-10-24T03:20:44.157Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="区块链" scheme="https://catiga.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="以太坊" scheme="https://catiga.github.io/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>enjoy new world</title>
+    <link href="https://catiga.github.io/2021/10/15/enjoy-new-world/"/>
+    <id>https://catiga.github.io/2021/10/15/enjoy-new-world/</id>
+    <published>2021-10-15T11:24:54.000Z</published>
+    <updated>2021-10-18T10:35:37.550Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;关于写博客&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/medias/contact.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;h2 id=&quot;为什么要创建自己的博客站&quot;&gt;&lt;a href=&quot;#为什么要创建自己的博客站&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
