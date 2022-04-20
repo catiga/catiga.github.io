@@ -138,6 +138,6 @@ live2d:
 
 baidu_url_submit:
   count: 100
-  host: godweiyang.com
-  token: jp7MKvOw74Yh3F09
+  host: catiga.github.io
+  token: 3K9lFU8pGocadXwR
   path: baidu_urls.txt
