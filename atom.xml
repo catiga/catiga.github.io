@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://catiga.github.io/"/>
-  <updated>2022-03-22T09:22:24.966Z</updated>
+  <updated>2022-05-11T01:17:10.196Z</updated>
   <id>https://catiga.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NFT &amp; Web3 Toolkits Collection</title>
+    <link href="https://catiga.github.io/2022/05/11/nft-tools/"/>
+    <id>https://catiga.github.io/2022/05/11/nft-tools/</id>
+    <published>2022-05-11T01:16:19.000Z</published>
+    <updated>2022-05-11T01:17:10.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;综合平台&quot;&gt;&lt;a href=&quot;#综合平台&quot; class=&quot;headerlink&quot; title=&quot;综合平台&quot;&gt;&lt;/a&gt;综合平台&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;NFTGO（新项目 + 趋势 + 逐个数据 + 巨鲸） NFT ranking, best and top
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>在Java的工程实现中使用Matlab计算能力</title>
