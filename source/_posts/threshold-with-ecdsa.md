@@ -265,7 +265,56 @@ $$
 - 第三步。设 $N_i = p_iq_i$ 是关联 $E_i$的RSA模数。每个参与者 $P_i$ 使用零知识证明他知道对应的 Schnorr's协议的 $x_i$，并且 $N_i$ 是一个 Gennaro, Micciancio, Rabin协议下的无平方数因数的数。
 
 ## 4.2. 签名生成
-我们来描述一下签名生成协议，这个协议接受m作为输入，其中m是待签名的消息M的hash值，协议的输出跟上文描述一致。
+我们来描述一下签名生成协议，这个协议接受m作为输入，其中m是待签名的消息M的hash值，协议的输出跟上文描述一致。我们注意到后面的协议是一个 t-out-of-n 协议（因此密钥x使用 $(t,n)$ Shamir方法实现分享）。
+定义 $S \subseteq [1..n]$ 为参与签名协议的参与者集合。我们假定 |S| = t + 1。对于签名协议，我们能使用 (t, t+1) 密钥分享方法，分享任意的短密钥，并且分享过程不需要使用一般的 $(t, n)$ 门限结构。我们注意到选择合适的拉格朗日系数 $\lambda_i$，S集合中的每一个参与者能够本地映射到他自己的 $(t, n)$ 门限分享的 $x_i$密钥分片，x是 $(t, t+1)$ 门限分享中的密钥， $w_i = (\lambda_{i, s}(x_i))$，例如
+$x = \sum_{i\in S}w_i$。因为 $X_i = g^{x_i} 和 \lambda_{i,S}$ 是公开的值，所有的参加者都能够完成计算 $W_i = g^{w_i} = X_i^{\lambda_{i, S}}$。
 
+- 阶段1. 每个参与者 $P_i 选择 k_i, \gamma_i \in_R Z_q$；计算 $[C_i, D_i] = Com(g^{\gamma_i}$ 并且广播 $C_i$。定义 $k=\sum_{i\in S}k_i, \gamma=\sum_{i\in S}\gamma_i$。并且定义乘法
+$$
+k\gamma = \sum_{i, j\in S}k_i\gamma_j\ mod\ q
+$$
+$$
+kx = \sum_{i, j\in S}k_iw_j\ mod\ q
+$$
 
+- 阶段2. 每一对参加者 $P_i, P_j$ 参加两个乘法到加法的分片转换子协议
+ - $P_i, P_j$ 各自使用自己的 $k_i, \gamma_j$ 密钥分片计算 MtA（乘法转加法）. 设 $\alpha_{ij} [另一个是\beta_{ij}]$ 是参加者 $P_i [和P_j]$ 分别得到的分片，符合以下计算协议 
+ $$
+ k_i \gamma_j = \alpha_{ij} + \beta_{ij}
+ $$
+
+ 参与者 $P_i 令 \delta_i = k_i\gamma_j + \sum_{j \neq i}\alpha_{ij} + \sum_{j \neq i}\beta_{ji}$。注意到 $\delta_i 是一个符合 k\gamma = \sum_{i\in S}\delta_i 的 \(t, t+1\) 加法门限分片$。
+
+ - $P_i, P_j 使用分片 k_i, w_j$分别执行 MtAwc计算。令 $\mu_{ij} [另一个参与者对应 \nu_{ij}]$ 为两个参与者分别得到的分片，符合以下计算协议
+ $$
+ k_iw_j = \mu_{ij} + \nu_{ij}
+ $$
+
+ 参与者 $P_i 令 \sigma_i = k_iw_j + \sum_{j \neq i}\mu_{ij} + \sum_{j \neq i}\nu_{ji}$。注意到 $\sigma_i 是一个符合 k\gamma = \sum_{i\in S}\delta_i 的 \(t, t+1\) 加法门限分片$。
+
+ - 阶段3. 每个参与者 $P_i 广播 \sigma_i，所有参与者使用 \sigma = \sum_{i\in S}\sigma_i = k\gamma 重构 \sigma$。所有参与者计算 $\sigma^{-1}\ mod\ q$。
+
+ - 阶段4. 每个参与者 $P_i 广播 D_i$。令 $\Gamma_i 是参与者 P_i基于零知识证明他知道 \gamma_i 所提交的值。\Gamma_i=g^{\gamma_i} 符合Schnorr协议$。
+ 参与者分别计算
+ $$
+ R = [\prod_{i\in S}\Gamma_i]^{\sigma^{-1}} = g^\(\sum_{i\in S}\gamma_i\)^{k^{-1}\gamma^{-1}} = g^{\gamma k^{-1} \gamma^{-1}} = g^{k^{-1}}
+ $$
+ 和$r = H'(R)$。
+
+ - 阶段5. 每个参与者 $P_i 令 s_i = mk_i + r\sigma_i$。使得
+ $$
+ \sum_{i\in S} = m\sum_{i\in S}k_i + r\sum_{i\in S}\sigma_i = mk + rkx = k\(m + xr\) = s
+ $$
+ 也就是 $s_i 是 s的 \(t, t+1\) 门限分片$。
+  - 5A 参与者 $P_i 选择 \iota_i, \rho_i \in R Z_q 计算 V_i = R^{s_i}g^{\iota_i} ， A_i = g^{\rho_i}，以及 [C_i, D_i] = Com\(V_i, A_i\) 并广播 C_i$。
+  令 $\iota = \sum_i\iota_i，\rho = \sum_i\rho_i$
+  - 5B 参与者 $P_i 广播D_i，并且使用零知识证明他知道 s_i, \iota_i, \rho_i，并且满足 V_i = R^{s_i}g^{\rho_i}， A_i^{\rho_i}$。如果零知识证明失败，协议终止。令 $V = g^{-m}y^{-\gamma} \prod_{i\in S}V_i \(需要满足 V = g\iota 以及 A = \prod_{i\in S}A_i \)$。
+  - 5C 参与者 $P_i 计算 U_i = V^{\rho_i} 和 T_i = A^{\rho_i}。 承诺 [C_i, D_i] = Com\(U_i, T_i\) 并广播 C_i$。
+
+  - 5D 参与者 $P_i 广播 D_i 来撤销承诺 U_i, T_i， 如果 \prod_{i\in S} [T_i] \neq \prod_{i\in S} U_i，则协议终止$。
+  - 5E 否则参与者 $P_i 广播 s_i。 所有参与者计算 s = \sum_{i\in S}s_i$。 如果 \(r, s\) 不是一个合法签名，参与者终止，否则接受并完成协议。
+
+让我们直观的解释一下阶段5的背后逻辑。为了避免昂贵的零知识证明，我们可能正在重构一个不正确的签名，在检查的时候很可能被拒绝。为了实现阶段5有一种想当然的方法，就是向所有参与者揭示$s_i，并能重构 s = \sum_is_i$。但是由于证明会被所有人获得，这无法保证安全，直观的原因是对手通过输出一个非法签名让协议终止，那么诚实的参与者所持有的 $s_i$ 可能会透漏他们拥有的有价值的信息。这个可能通过广播 $S_i = R^{s_i} 并且根据DSA验证算法执行检查计算 \prod_iS_i = R^s = g^my^\gamma$ 而完成。但由于相似的原因，这步导致协议失败。因此在我们的协议中，参与者使用一个随机数$g^{\iota_i}来隐藏R^{s_i}$。
+令 $V_i = R^{s_i}g^{\iota_i}， 那么 \prod_iV_i = R^sg^{\iota}，并且 V = g^{\iota}$。
+参与者不能揭示 $g^{\iota_i}$来检查V的正确性，因为这消除了 $R^{s_i}，所以我们随机化了这个聚合值，变成 U = g^{\iota \rho}$。所有参与者通过分布式"Diffie-Hellman"交换，共同计算$g^{\iota\rho}$。如果这种分布式的随机化签名验证执行了，那么就实现了安全的分法分片值$s_i$，但是如果这个签名无法验证，则协议直接终止并且诚实参与者持有的分片值$s_i$永远不会被清晰的呈现出来。
 ## 待续 ##
