@@ -310,7 +310,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -469,14 +469,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.5k
+                    12.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    40 分
+                    48 分
                 </div>
                 
                 
@@ -680,6 +680,42 @@
 </li>
 </ul>
 <p>让我们直观的解释一下阶段5的背后逻辑。为了避免昂贵的零知识证明，我们可能正在重构一个不正确的签名，在检查的时候很可能被拒绝。为了实现阶段5有一种想当然的方法，就是向所有参与者揭示$s_i，并能重构 s = \sum_is_i$。但是由于证明会被所有人获得，这无法保证安全，直观的原因是对手通过输出一个非法签名让协议终止，那么诚实的参与者所持有的 $s_i$ 可能会透漏他们拥有的有价值的信息。这个可能通过广播 $S_i = R^{s_i} 并且根据DSA验证算法执行检查计算 \prod_iS_i = R^s = g^my^\gamma$ 而完成。但由于相似的原因，这步导致协议失败。因此在我们的协议中，参与者使用一个随机数$g^{\iota_i}来隐藏R^{s_i}$。<br>令 $V_i = R^{s_i}g^{\iota_i}， 那么 \prod_iV_i = R^sg^{\iota}，并且 V = g^{\iota}$。<br>参与者不能揭示 $g^{\iota_i}$来检查V的正确性，因为这消除了 $R^{s_i}，所以我们随机化了这个聚合值，变成 U = g^{\iota \rho}$。所有参与者通过分布式”Diffie-Hellman”交换，共同计算$g^{\iota\rho}$。如果这种分布式的随机化签名验证执行了，那么就实现了安全的分法分片值$s_i$，但是如果这个签名无法验证，则协议直接终止并且诚实参与者持有的分片值$s_i$永远不会被清晰的呈现出来。</p>
+<h2 id="4-3-关于零知识证明"><a href="#4-3-关于零知识证明" class="headerlink" title="4.3. 关于零知识证明"></a>4.3. 关于零知识证明</h2><p>在 5B 这步，参与者 $P 输出了 V = R^sg^{\iota} 和 A = g^{\rho}，并且必须证明他知道 s, \iota, \rho 满足上面的等式关系$。关于A的证明是经典的Schnorr证明。V值的计算则是经典的（诚实验证者）零知识证明，计算步骤如下：</p>
+<ul>
+<li>证明者选择 $a, b \in_R Z_q 并且发出 \alpha = R^ag^b$</li>
+<li>验证者发出一个随机挑战 $c \in_R Z_q$</li>
+<li>证明者回答验证者的挑战，通过如下计算 $t = a + cs\ mod\ q 和 u = b + c\iota\ mod\ q$</li>
+<li>验证者检查如下等式是否成立 $R^tg^{\mu} = \alpha V^c$</li>
+</ul>
+<h2 id="4-4-安全证明"><a href="#4-4-安全证明" class="headerlink" title="4.4. 安全证明"></a>4.4. 安全证明</h2><p>本章证明下述定理</p>
+<p><mark>定理1</mark> 假定</p>
+<ul>
+<li>DSA签名方法不可伪造</li>
+<li>强RSA方法的假设前提成立</li>
+<li>KG, Com, Ver, Equiv 是非扩展的具有二义性的承诺方法</li>
+<li>DDH方法的假设前提成立<br>那么我们在前面章节提到的门限DSA算法是不可伪造的。</li>
+</ul>
+<p>该定理的证明将通过传统的模拟论据完成，这里我们展示了一个对手A，以极大概率伪造了门限签名，那么我们就能够设定一个伪造者F，使用中心化的DSA方法也以极大概率伪造了签名。<br>因此让我们假定使用门限方法伪造签名的对手A的概率关系如下， $    \epsilon \geq \lambda^{-c}$。<br>我们假定对手控制了 {$P_2, …, P_{t+1}$} 个参与者，并且 $P_1$ 是最诚实的参与者。因为我们使用同时非扩展承诺（即对手能够看到所有诚实参与者的承诺信息数据），那么这个证明在当对手控制了少于t个参与者并且我们有多于1个诚实参与者的条件下也会成立。因此上述假定仍然具有一般性。<br>因为我们假定对手是并未充分准备的，诚实参与者$P_1$在每一轮计算中都是率先执行并广播。我们的模拟器将充当 $P_1$ 参与者的角色，并且与控制了 {$P_2, …, P_n$} 的对手进行交互。回想一下对手A的工作：它首先参与了key-gen协议来为门限方法生成公钥y。接下来它要求其他参与者来签名一系列消息 {$m1, …, m_{\iota}$}，并且他们都加入到针对这系列消息的签名协议运行。最后它至少有概率 $\epsilon$ 输出消息 $m \neq m_i$ 和一个DSA公钥y下的合法签名 (r, s)。这个概率依赖于A选择的随机数 $\tau_A$以及 $P_1选择的随机数 \tau_1$。<br>假设我们用 $A(\tau_A)_{P_1(\tau_1)}$来表示A在上述描述的实验过程的最后输出，我们可以将概率表示为</p>
+<p>$$<br>Prob_{\tau_1, \tau_A}[A(\tau_A)_{P_1(\tau_1)} 是伪造的] \geq \epsilon<br>$$</p>
+<p>我们指出对手A选择的随机数 $\tau_A$ 如果满足下面条件，则是恰当的<br>$$<br>Prob_{\tau_1}[A(\tau_A)_{P_1(\tau_1)} 是伪造的] \geq \frac{\epsilon}{2}<br>$$</p>
+<p>通过马尔可夫不等式的标准应用，我们知道如果 $\tau_A$ 被均匀随机的选择，那么选择恰当值的概率至少低于 $\frac{\epsilon}{2}$。</p>
+<p>我们现在转而构建对手F，使用中心化的方法来伪造签名。这个伪造者将使用A作为子程序来进行模拟门限签名过程：F充当诚实者 $P_1$ 的角色，同时A控制其他参与者。F将为A选择随机数 $\tau_A$：我们知道这个合适的值的选择概率低于 $\frac{\epsilon}{2}$。从现在开始我们假定A已经选择了合适的随机数。<br>F以公钥y为输入运行中心化的DSA签名算法，随机数在均匀分布的集合G中随机选定。F的第一个任务是设定一套不可区分的模拟的密钥生成协议，以得到相同的公钥y。<br>近似的，每次A要求对消息$m_i$进行签名，伪造者F会从他的签名预言机中接收到外部的真实签名信息$(r_i, s_i)$。然后进将以一种难以区分的方式进行模拟门限签名的执行过程，实现以消息$m_i$为输入，产生签名$(r_i, s_i)$。</p>
+<p>因为对于A来说，这个模拟过程与真实协议的运行是无法区分的，那么对手将输出与真实场景中一摸一样的概率结果。这种伪造的 m, r, s是关于消息的签名，永远不会被F通过它的签名预言机查询到，并且因而对F是一个有效的伪造。我们现在转向模拟的细节。</p>
+<h2 id="4-5-模拟key-gen协议"><a href="#4-5-模拟key-gen协议" class="headerlink" title="4.5. 模拟key-gen协议"></a>4.5. 模拟key-gen协议</h2><p>下面描述Sim-Key-Gen模拟。以 $y = g^x$ 计算DSA公钥并输入，伪造者F接下来充当 $P_1$ 的角色。伪造者F同样通过输入一个Paillier公钥E继续运行，但是F并不知道对应的私钥（当我们需要对Paillier加密方法的语义安全做减法时，私钥是必须的）。</p>
+<p><mark>模拟</mark>：重复下述步骤，直到A发送有效信息（也就是一个正确的解除承诺）给 参与两次迭代的{$P_2, …, P_n$}。</p>
+<ul>
+<li>F(作为 $P_1$) 选择一个随机数 $\mu_1 \in Z_q，计算[KGC_1, KGD_1] = Com(g^{\mu_1}) 并广播 KGC_1$。A广播所有的承诺信息 $KCG_i, i&gt;1$。</li>
+<li>每个参与者 $P_i 分别广播 KGD_i$；设$y_i 是解除承诺的值，由Feldman-VSS产生 (F将按照协议指令执行)$。每个参与者 广播 $E_i。F广播 E_1 = E$。</li>
+<li>令 $y_i$ 表示为每一个参与者公开的承诺值。F转回对手解除承诺的步骤<ul>
+<li>changes the opening of $P_1 to KGD_1$，这样被公开的承诺值变为 $y_1 = y \prod_{i=2}^n y_i^{-1}$。</li>
+<li>使用上面计算出来的自有值 $y_1$ 模拟 Feldman-VSS</li>
+</ul>
+</li>
+<li>对手A广播$KGD_i$。令 $y_i$是A公开的承诺值。$(this\ could\ be\ ⊥\ if\ the\ adversary\ refused\ to\ decommit)$.</li>
+<li>参与者计算 $y = \prod_{i=1}^n y_i (set\ to\ ⊥\ if\ any\ of\ the\ ˆyi\ are\ set\ to\ ⊥\ in\ the\ previous\ step)$<br>现在对这个模拟的引理做一些证明。</li>
+</ul>
+<p><mark>引理1.</mark> 这个模拟过程会在可期望的二项式时间内结束，并且无法与真实协议相区分。<br>证明（引理1）。因为A以一个合适的随机数运行，我们知道基于这个随机数选择的F的概率，那么A将正确的解除承诺的概率至少符合如下公式 $\frac{\epsilon}{2} &gt; \frac{1}{2\lambda^c}$。因而我们将有必要在一个多项式约束的期望时间内重复这个过程。<br>模拟过程和真实过程的唯一区别是 $P_1 以指数自由项 y_1 运行模拟Feldman-VSS 过程$，并且它不知道其离散对数。但是我们知道这个模拟与真实的Feldman-VSS有相同的分布。因此这个协议的模拟是完美的。</p>
+<p><mark>引理2.</mark> 对于一个有大分子的多项式输入y，模拟过程终止于输出y的概率非常小。<br>证明（引理2）。首先我们证明如果当输出不是⊥的时候，这个模拟过程会终止，那么它终止于输出y，不过这个概率非常低。这是承诺方案不可扩展的结果。事实上，如果A两次正确解除承诺 $KGC_i$，必须使用相同的字符串，不管$P_1也解除(亦即忽略概率)$。因而在 i&gt;1的情况 $ˆy_i = y_i$，进而 ^y = y。<br>接着我们证明上述过程会发生在输入y具有多项式大分子项的情况下。令 $y_A = \prod_{i=2}^n y_i$，也就是对手对协议输出的贡献。注意到因为非延展性，这个值在F转为对手是由其决定并掌握。在这个点上F转换为对手，并且选择 $^y_1 = y(y_A^{-1})$。因为y是均匀分布的，则$^y_1$也是均匀分布的。因为A运行于一个合适的随机数上，我们知道有一部分概率为 $\frac{\epsilon}{2} &gt; \frac{1}{2\lambda^c}$ 的 $^y_1$ 由A正确的解除承诺提交。因为 $y 和 ^y_1$ 有一一对应的关系，我们能够得出如下结论，对于发生概率满足 $\frac{\epsilon}{2} &gt; \frac{1}{2\lambda^c}$ 的一部分输入y，这个协议将正确完成。</p>
 <h2 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h2>
             </div>
             <hr />
@@ -1173,7 +1209,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="具有快速无信任设置的快速多方门限ECDSA">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="具有快速无信任设置的快速多方门限ECDSA">
                         
                         <span class="card-title">具有快速无信任设置的快速多方门限ECDSA</span>
                     </div>
@@ -1227,7 +1263,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="NFT & Web3 Toolkits Collection">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="NFT & Web3 Toolkits Collection">
                         
                         <span class="card-title">NFT & Web3 Toolkits Collection</span>
                     </div>
@@ -1420,7 +1456,7 @@ D
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">38.1k</span>
+            <span class="white-color">40.2k</span>
             
 
             <br>
