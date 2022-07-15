@@ -310,7 +310,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -469,14 +469,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.6k
+                    14.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    48 分
+                    55 分
                 </div>
                 
                 
@@ -716,6 +716,44 @@
 </ul>
 <p><mark>引理1.</mark> 这个模拟过程会在可期望的二项式时间内结束，并且无法与真实协议相区分。<br>证明（引理1）。因为A以一个合适的随机数运行，我们知道基于这个随机数选择的F的概率，那么A将正确的解除承诺的概率至少符合如下公式 $\frac{\epsilon}{2} &gt; \frac{1}{2\lambda^c}$。因而我们将有必要在一个多项式约束的期望时间内重复这个过程。<br>模拟过程和真实过程的唯一区别是 $P_1 以指数自由项 y_1 运行模拟Feldman-VSS 过程$，并且它不知道其离散对数。但是我们知道这个模拟与真实的Feldman-VSS有相同的分布。因此这个协议的模拟是完美的。</p>
 <p><mark>引理2.</mark> 对于一个有大分子的多项式输入y，模拟过程终止于输出y的概率非常小。<br>证明（引理2）。首先我们证明如果当输出不是⊥的时候，这个模拟过程会终止，那么它终止于输出y，不过这个概率非常低。这是承诺方案不可扩展的结果。事实上，如果A两次正确解除承诺 $KGC_i$，必须使用相同的字符串，不管$P_1也解除(亦即忽略概率)$。因而在 i&gt;1的情况 $ˆy_i = y_i$，进而 ^y = y。<br>接着我们证明上述过程会发生在输入y具有多项式大分子项的情况下。令 $y_A = \prod_{i=2}^n y_i$，也就是对手对协议输出的贡献。注意到因为非延展性，这个值在F转为对手是由其决定并掌握。在这个点上F转换为对手，并且选择 $^y_1 = y(y_A^{-1})$。因为y是均匀分布的，则$^y_1$也是均匀分布的。因为A运行于一个合适的随机数上，我们知道有一部分概率为 $\frac{\epsilon}{2} &gt; \frac{1}{2\lambda^c}$ 的 $^y_1$ 由A正确的解除承诺提交。因为 $y 和 ^y_1$ 有一一对应的关系，我们能够得出如下结论，对于发生概率满足 $\frac{\epsilon}{2} &gt; \frac{1}{2\lambda^c}$ 的一部分输入y，这个协议将正确完成。</p>
+<h2 id="4-6-签名生成模拟"><a href="#4-6-签名生成模拟" class="headerlink" title="4.6. 签名生成模拟"></a>4.6. 签名生成模拟</h2><p>密钥生成完后，F需要处理由对手A发起的签名查询。当A发起队消息m的签名，伪造者F将加入这个门限签名协议的模拟过程。在模拟过程中，F将访问签名预言机，这个签名预言机在之前发给F的公钥y下产生DSA签名。<br><mark>半正确执行</mark>. 设k满足 $R = g^{k^{-1}}$， 并且 令 k’ 为由 MtA 和 MtAwc 协议参与者输入值定义的值。具体来说，如果 $c_i$ 是在第一轮协议中的参与者发出的加密值，那么定义 $k’_i = Dec_i(c_i)，并且 k’ = \sum_i k’_i$。<br>我们指出，如果在步骤4中，它满足 k = k’，那么这个协议执行是半正确的。注意到因为 k, k’ 的值是在步骤4中被唯一确定的，那么这个条件是很好定义的。也要注意到，如果对手A通过在 $\deta$ 的计算中暴露错误的分片来扰乱R的计算过程，那么这个执行就不是半正确的。<br>在协议真实的运行过程中，决定一个执行过程是否是半正确的是不可行的。然而，正如我们即将看到的，在模拟过程中，我们能够探测到是否一个执行过程是半正确的，并且依赖它是否是半正确的，这个模拟过程将决定如何模拟阶段5.<br><mark>模拟鸟瞰</mark>. 首先我们注意到，对于半正确执行，对手在步骤4后已经能够探测到好的参与者在步骤5广播的值 $R^{s_1}$ 是否正确。事实上通过这点，对手有了 $s_i i&gt;1$ 并且对于一个参加者， $R^{s_1}$的值能够通过下面公式检查<br>$$<br>\prod_i R^{s_i} = R^s = g^my^r<br>$$<br>而且在这些执行过程中，当我们达到步骤5A，这个模拟器将能够为好的参与者提供到 $s_1$ 的值，这些好的参与者将保证模拟过程成功结束。<br>第二步，我们展示对于非半正确的模拟，将有很大概率在步骤5D失败，因为好的参与者提供的 $U_1$ 值更像随机数。这允许我们通过简单的为$P_1$使用一个随机数来模拟阶段5.<br>最后，模拟器需要检测执行过程是否是半正确的，目的是知道选择的执行路径。虽然在真正的协议中，这种检测是不可能的，但是模拟器能够提供恰当的值来促进这个检测。下面是这个过程的详细描述。</p>
+<h2 id="4-7-半正确执行"><a href="#4-7-半正确执行" class="headerlink" title="4.7. 半正确执行"></a>4.7. 半正确执行</h2><p>现在，我们提供一个工作与半正确执行的模拟。<br>我们指出F不知道$P_1$关联的所有秘密值，包括：它的正确的密钥分片$w_1$，以及密钥对应的公钥$E_1$。不知道公钥是必要的，这是为了降低加密方案的语义安全的不可伪造性。<br>然而F确实知道所有其他参与者的私钥分片 $w_j$ 。它同时知道 $P_1$ 的公钥，根据密钥生成协议的模拟定义， $W_1 = g^{w_1}$。<br>接下的模拟过程中，当协议应该中止的时候，F中止它，也就是说$如果对手(i)拒绝在步骤4、5B或者5D中解除承诺，或者在步骤2、5中未通过零知识证明，或者签名(r, s)无法验证$。</p>
+<ul>
+<li><p>阶段1. 所有参与者通过广播$C_i (F为P_1正确执行协议)$执行协议.</p>
+</li>
+<li><p>阶段2.</p>
+<ul>
+<li>所有参与者使用在阶段1中选择的 $k_1 和 \gamma_1 执行 MtA协议 计算 k和\gamma$。F为$P_1$正确运行协议。对于每一个其他参与者 $P_i i&gt;1$，F运行两次MtA协议，一次它使用 $k_1$ 初始化，另一次它使用$\gamma_1$ 作为响应者。F从 i&gt;1 的范围证明中得到以下值<ul>
+<li>$k_i$</li>
+<li>$\gamma_i$</li>
+<li>$\beta_{1i}’$<br>注意到当F作为初始化的协议执行方时，在使用$k_1, \gamma_j作为输入的 P_j方的协议运行期间$，它不能解密它自己的加密分片$\alpha_{1j}$。然而，使用它得到的这些值，它能够计算 $\alpha_{1j} = k_1\gamma_i + \beta_i’\ mod\ q$。</li>
+</ul>
+</li>
+<li>所有参与者使用MtAwc协议计算k和x。这里F根据第三章描述的方式来模拟$P_1$，因为它不知道它自己的$w_1$。<br>然而它通过零知识证明得到 $P_j’s 的结果分片 v_{1j}$</li>
+<li>使用$k_j, w_1作为输入的P_j的协议运行过程中$， F不知道 $w_1$，因此它就发送随机数$\mu_{j1} 给 P_j$。<br>注意，此时F知道所有坏的参与者的 $\delta_i$ 的合。事实上<br>$$<br>\sum_{i&gt;1}\delta_i = \sum_{i, j&gt;1}k_iw_j + \sum_j\mu_{j1} + \sum_j\nu_{1j}<br>$$<br>并且F知道等式右边的所有值。</li>
+</ul>
+</li>
+<li><p>阶段3. 所有参与者通过暴露$\delta_i$来参与协议。令 $\delta = \sum_i\delta_i (F使用它在步骤2中选择的随机分片来为P_1正确运行协议 - 因而F有效广播一个随机 \delta_1 )$。</p>
+</li>
+<li><p>阶段4. </p>
+<ol>
+<li>每个参与者暴露 $D_i 来解除对 \Gamma_i 的承诺$</li>
+<li>F通过签名预言机查询并收到一个关于m的签名 $(r, s)$， 并计算 $R = g^{ms^{-1}} y^{rs^{-1}} \in G (注意， H’(R) = r \in Z_q )$</li>
+<li>F转回A解除承诺的步骤，并且充当 $P_1 改变承诺值为 \Gamma_1’ = R^{\delta} \prod_{i&gt;1}\Gamma_i^{-1}。 注意 [\Gamma_1’\prod_{i&gt;1}\Gamma_i]^{\delta^{-1}} = R$<br>注意，此时F知道坏的参与者持有的 $s_i$的值，由于$s_i = k_i m + \sigma_i r$，因此F能够将$P_1 持有的正确的s_1 计算为 s - \sum_{i&gt;1}s_i$。</li>
+</ol>
+</li>
+<li><p>阶段5. 所有参与者在此阶段执行所有步骤。 F使用 $s_1 作为 P_1 的分片$。</p>
+</li>
+</ul>
+<p>我们证明以下关于模拟的引理。</p>
+<p><mark>引理3.</mark> 假定</p>
+<ul>
+<li>强RSA前提成立</li>
+<li>KG，Com， Ver， Equiv 是不可延展的模糊承诺；<br>那么模拟具有下列属性</li>
+<li>当输入消息m，则输出一个合法签名 $(r, s)$ 或者中止。</li>
+<li>与半正确真实执行过程，在计算上无法区分<br>证明（引理3）。<br>真实过程和模拟过程唯一的区别：在MtA协议中，$c_i = E_i(k_i) 被公开，真实协议中 R = g^{k^{-1}}，其中 k = \sum_i k_i，在模拟过程中， R = g^{k’^{-1}}，其中k’来源于签名预言机$。在语义安全的Paillier加密保证下，这两个过程被看作计算上是无法区分的。</li>
+</ul>
+<p>事实上，当F转而成为对手来“修正”R的值，那么它隐式的改变了F作为 $P_1被用于计算R 的k_1的值$。当 $R = g^{k’^{-1} }$，隐式的另 $k_1’ = k’ - \sum_{i&gt;1} k_i$ 。<br>注意到 $R^{k_1’}$ 可以被知道，因为 $R^{k_1’ + \sum_{i&gt;1}k_i} = g$，因而 $R^{k_1’} = g R^{- \sum_{i&gt;1} k_i}$。因此，为了区分真实执行和模拟执行，对手必须检测在第一轮MtAwc协议中F充当$P_1$ 发出的密文是否包含一个随机数 $k_1$ 或者由计算 $log_R(g R^{- \sum_{i&gt;1} k_i}) $ 确定的随机数 $k_1’$，这在语义安全的Paillier加密中是不可行的（给出所有的值被证明是足够小，并且没有对N取模计算）。<br>注意到我们正在用非半正确执行模拟一个半正确执行，但是因为两者无法区分，也并没有什么问题。</p>
 <h2 id="待续"><a href="#待续" class="headerlink" title="待续"></a>待续</h2>
             </div>
             <hr />
@@ -1209,7 +1247,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="具有快速无信任设置的快速多方门限ECDSA">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="具有快速无信任设置的快速多方门限ECDSA">
                         
                         <span class="card-title">具有快速无信任设置的快速多方门限ECDSA</span>
                     </div>
@@ -1263,7 +1301,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="NFT & Web3 Toolkits Collection">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="NFT & Web3 Toolkits Collection">
                         
                         <span class="card-title">NFT & Web3 Toolkits Collection</span>
                     </div>
@@ -1456,7 +1494,7 @@ D
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">40.2k</span>
+            <span class="white-color">42.1k</span>
             
 
             <br>
